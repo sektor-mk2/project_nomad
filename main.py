@@ -8,13 +8,17 @@ MAX_FPS = 60
 class Level:
     def __init__(self):
         self.grid = [
-            [1, 1, 0, 1],
-            [1, 0, 0, 1],
-            [0, 1, 0, 0],
-            [0, 0, 1, 1],
+            [1, 1, 0, 1, 1, 1, 0, 1],
+            [1, 0, 0, 1, 1, 0, 0, 1],
+            [0, 1, 0, 0, 0, 1, 0, 0],
+            [0, 0, 1, 1, 0, 0, 1, 1],
+            [1, 1, 0, 1, 1, 1, 0, 1],
+            [1, 0, 0, 1, 1, 0, 0, 1],
+            [0, 1, 0, 0, 0, 1, 0, 0],
+            [0, 0, 1, 1, 0, 0, 1, 1],
         ]
-        self.grid_width = 4
-        self.grid_height = 4
+        self.grid_width = 8
+        self.grid_height = 8
         self.tile_width = 64
         self.tile_height = 64
 
@@ -40,4 +44,6 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
+    pos = pygame.mouse.get_pos()
+    print(pos)
     pygame.display.update()
