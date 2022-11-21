@@ -1,6 +1,3 @@
-Fix github profile on bigger machine
 Test env
 Test requirements
 Fix code samples
-
-Limit Framerate
