@@ -3,6 +3,8 @@ import pygame
 from pygame.locals import *
 
 MAX_FPS = 60
+resolution_x = 400
+resolution_y = 300
 
 
 class Level:
@@ -31,7 +33,7 @@ class Level:
 
 level = Level()
 pygame.init()
-main_display = pygame.display.set_mode((400, 300), 0, 32)
+main_display = pygame.display.set_mode((resolution_x, resolution_y), 0, 32)
 fps_clock = pygame.time.Clock()
 
 # window title
@@ -44,6 +46,6 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    pos = pygame.mouse.get_pos()
-    print(pos)
+    cursor_pos = pygame.mouse.get_pos()
+    print(cursor)
     pygame.display.update()
