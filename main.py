@@ -62,11 +62,11 @@ while True:
         for y in range(0, level.grid_height):
             if level.grid[y][x]:
                 main_display.fill(
-                    (100, 100, 100), (x * level.tile_width, y * level.tile_height, level.tile_width, level.tile_height)
+                    (120, 120, 120), (x * level.tile_width, y * level.tile_height, level.tile_width, level.tile_height)
                 )
             else:
                 main_display.fill(
-                    (0, 0, 0), (x * level.tile_width, y * level.tile_height, level.tile_width, level.tile_height)
+                    (20, 20, 20), (x * level.tile_width, y * level.tile_height, level.tile_width, level.tile_height)
                 )
 
     main_display.fill((180, 0, 0), (mc_x, mc_y, 10, 10))
@@ -77,9 +77,8 @@ while True:
             sys.exit()
 
     cursor_pos = pygame.mouse.get_pos()
-    cursor_x = cursor_pos[0]
-    cursor_y = cursor_pos[1]
-    main_display.fill((0, 0, 180), (cursor_x, cursor_y, 5, 5))
+    cursor_offset_x = cursor_pos[0]
+    cursor_offset_y = cursor_pos[1]
 
     # cursor_x = cursor_pos[0]
     # cursor_y = cursor_pos[1]
